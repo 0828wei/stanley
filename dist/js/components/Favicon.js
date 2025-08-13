@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lovetech | About Us</title>
-        <link
+class Favicon {
+    static init() {
+        let head = document.querySelector("head");
+        let link = `<link
             rel="apple-touch-icon"
             sizes="57x57"
             href="./favicon/apple-icon-57x57.png"
@@ -79,11 +76,9 @@
             name="msapplication-TileImage"
             content="./favicon/ms-icon-144x144.png"
         />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="stylesheet" href="../css/about-us.css" />
-    </head>
-    <body>
-        <div id="header-container"></div>
-    </body>
-    <script type="module" src="js/about-us.js"></script>
-</html>
+        <meta name="theme-color" content="#ffffff" />`;
+        head.insertAdjacentHTML("beforeend", link);
+    }
+}
+
+export { Favicon };
